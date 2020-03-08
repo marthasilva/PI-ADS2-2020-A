@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schema</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/modal.css">
+    <link rel="stylesheet" href="style/navBar.css">
+</head>
+<body>
+    <div id="divContainer">
+        <div class="divNavH">
+            <ul class="navHorizontal">
+                <li>
+                    <a href="">
+                        horizontal1
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        horizontal2
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        horizontal3
+                    </a>
+                </li>
+                <li class="liDropdownH"><a href="#ulDropdown">Acessar</a>
+                    <!-- colocando uma lista dentro de outra (criando um dropdown) -->
+                    <ul id="ulDropdownH" class="ulDropdownH" style="height:100%; padding-top: 0; margin: 0;"> 
+                        <li style="display: block; width: 100px; margin-top: 9px;">
+                            <button class="btnNavH" onclick="document.getElementById('idCad').style.display='block'" style="width:100%; height:100%">
+                                Cadastrar
+                            </button>
+                        </li>
+                        <li style="display: block;">
+                            <button class="btnNavH" onclick="document.getElementById('idLogin').style.display='block'" style="width:100%; height: 100%">
+                                Login
+                            </button>
+                        </li>    
+                    </ul>
+                </li>    
+            </ul>
+        </div> <!-- divNav -->
+        
+        <input type="checkbox" id="menuzin">
+        <label for="menuzin">Menu</label>
+        
+        <!-- NAVBAR VERTICAL -->
+
+        <div class="divNavV">
+            <ul class="navVertical">
+                <li class="liDropdownV">
+                    <a class="aDropdownV" href="">
+                        Acessar
+                    </a>
+                    <ul class="ulDropdownV" style="padding: 0; margin: 0;">
+                        <li id="liCad" class="liAcesso">
+                            <button class="btnNavH" onclick="document.getElementById('idCad').style.display='block'" style="width:100%; height:100%; margin: 0;">
+                                Cadastrar
+                            </button>
+                        </li>
+                        <li id="liLogin" class="liAcesso" style="padding: 0; margin: 0;">
+                            <button class="btnNavH" onclick="document.getElementById('idLogin').style.display='block'" style="width:100%; height: 100%; margin: 0;">
+                                Login
+                            </button>    
+                        </li>  
+                    </ul>
+                </li>
+                      
+                <li>
+                    <a href="">
+                        vertical1
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        vertical2
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        vertical3
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        vertical4
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- divNav -->
+        
+        <div class="divHeader" style="background-color: #d1d0d0;" id="divHeader">
+            
+        </div> <!-- divHeader  -->
+        
+        <hr>
+        
+        <div class="divSection" style="background-color: #ffdfdf;" id="divSection1">
+            
+        </div> <!-- divSection1 -->
+        
+        <hr>
+        
+        <div class="divSection" style="background-color: #d1d0d0;" id="divSection2">
+            
+        </div> <!-- divSection2 -->
+        
+        <hr>
+        
+        <div class="divSection" style="background-color: #ffdfdf;" id="divSection3">
+            
+        </div> <!-- divSection3 -->
+        
+        <hr>    
+        
+        <div class="divSection" style="background-color: #d1d0d0;" id="divSection4">
+            
+        </div> <!-- divSection4 -->
+        
+        <hr>
+        
+        <div class="divSection" style="background-color: #ffdfdf;" id="divSection5">
+            
+        </div> <!-- divSection5 -->
+        
+        <hr>
+        
+        <div class="divPreFooter" style="background-color: yellow;" id="divFooter">
+            
+        </div> <!-- divPreFooter -->
+        
+        <div class="divFooter" style="background-color: #d1d0d0;" id="divFooter">
+            
+        </div> <!-- divFooter -->
+        
+        <div class="divRights" style="background-color: #ffdfdf;" id="divFooter">
+            
+        </div> <!-- divRights -->
+        
+        
+<!-- ************************************************************************************************** -->
+<!-- ************************************************************************************************** -->
+<!-- ************************************************************************************************** -->
+
+<div id="idCad" class="modal">
+      
+    <div class="modal-content modalCad animate">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('idCad').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="image/new-user.png" alt="Avatar" class="avatar">
+      </div>
+  
+      <div class="container">
+        <label for="nome"><b>Nome: </b></label>
+        <input class="inputModal" type="text" placeholder="Digite o seu nome" name="nome">
+  
+        <label for="email"><b>E-mail: </b></label>
+        <input class="inputModal" type="text" placeholder="Digite seu e-mail" name="email">
+  
+        <label for="nomeU"><b>Nome de Usuário:</b></label>
+        <input class="inputModal" type="text" placeholder="Digite o nome de usuário desejado" name="nomeU">
+  
+        <label for="senha"><b>Senha:</b></label>
+        <input class="inputModal" type="password" placeholder="Digite uma senha" name="senha">
+          
+        <label for="senhaC"><b>Confirmação de Senha:</b></label>
+        <input class="inputModal" type="password" placeholder="Ambas as senhas devem ser iguais" name="senhaC">
+          
+        <button type="submit">Cadastrar</button>
+        <label>
+          <input type="checkbox" checked="checked" name="receber"> Receber novidades por e-mail?
+        </label>
+      </div>
+  
+      <div class="container containerSenha" style="text-align: center; background-color:#e4e4e4">  
+        <button type="button" onclick="document.getElementById('idCad').style.display='none'" class="btnCancel">Cancelar</button>
+      </div>
+    </div>
+</div>
+
+<!--****************************MODAL DE LOGIN****************************-->
+
+<div id="idLogin" class="modal">
+  
+  <div class="modal-content modalLogin animate">
+    <div class="imgcontainerLogin">
+      <span onclick="document.getElementById('idLogin').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="image/user.png" alt="Avatar" class="avatarLogin">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Nome de usuário:</b></label>
+      <input class="inputModal" type="text" placeholder="Digite seu usuário" name="uname">
+
+      <label for="psw"><b>Senha:</b></label>
+      <input class="inputModal" type="password" placeholder="Digite sua senha" name="psw">
+        
+      <button type="submit">Acessar</button>
+      <label>
+        <input type="checkbox" name="remember"> Lembrar de mim
+      </label>
+    </div>
+
+    <div class="container containerSenha" style="background-color:#e4e4e4">  
+      <div class="divEsqueci">
+        <span class="psw">Esqueceu sua senha?</span>
+        <button type="button" onclick="document.getElementById('idEsqueciSenha').style.display='block'" class="btnSenha">Clique aqui.</button>
+      </div>
+      <button type="button" onclick="document.getElementById('idLogin').style.display='none'" class="btnCancel">Cancelar</button>
+    </div>
+
+  </div>
+
+<!--****************************MODAL ESQUECI SENHA****************************-->
+
+<div id="idEsqueciSenha" class="modal">
+  
+  <div class="modal-content modalSenha animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('idEsqueciSenha').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="image/key.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Preencha para receber uma nova senha:</b></label>
+      <input class="inputModal" type="text" placeholder="Insira o seu e-mail" name="uname">
+
+      <button type="submit">Enviar</button>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('idEsqueciSenha').style.display='none'" class="btnCancel" style="width:100%;">
+        <span style="font-size: 200%; margin-top: 10px">&larr;</span> &nbsp; Voltar</button>
+    </div>
+</div>
+</div>
+
+<!-- ************************************************************************************************** -->
+<!-- ************************************************************************************************** -->
+<!-- ************************************************************************************************** -->
+
+</div>
+</body>
+</html>
+
+<script>
+    //cria uma variável que se linka ao modal
+    var cadastro = document.getElementById('idCad');
+    var login = document.getElementById('idLogin');
+    var esqueciSenha = document.getElementById('idEsqueciSenha');
+
+    // quando o usuário clicar em qualquer lugar fora do modal, o modal fecha
+    window.onclick = (nomeFuncao) => {
+        if (nomeFuncao.target == cadastro) {
+            cadastro.style.display = "none";
+        }
+        if (nomeFuncao.target == login){
+            login.style.display = "none";
+        }
+        if (nomeFuncao.target == esqueciSenha) {
+            esqueciSenha.style.display = "none";
+        }
+        // window.location = "file:///D:/testeGrupo6/testeModal.html";
+    }
+</script>

@@ -1,0 +1,214 @@
+
+/****************************** NAVBAR HORIZONTAL ******************************/
+.divNavH{
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width:100%; 
+	box-shadow: 0px 1px 4px 1px rgb(163, 150, 133); 
+	position: fixed;
+	top:0;
+	left:0;
+	z-index: 1;
+    font-weight: bold;
+    background-color: red;
+}
+
+.navHorizontal{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: violet;
+}
+
+.navHorizontal li{
+    margin: 0;
+    padding: 9.7px 0;
+    height: 100%;
+    display: inline-block;
+    background-color: crimson;
+}
+
+.navHorizontal li a{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px 10px;
+    height: 100%;
+    min-height: 50px;
+    font-size: 200%;
+    text-decoration: none;
+    background-color: cyan;
+}
+
+.navHorizontal li a:hover{
+    border-bottom: 2px dotted blue;
+    color: red;
+    background-color: white;
+    transition: 0.7s;
+}
+
+
+.ulDropdownH{
+    list-style:none; /* removendo o tipo de lista da ul ul da navBar (elemento 'Acesso' que tem dois li - Cadastro e Login) */
+    position:absolute; /* setando a posição da lista(os elementos cadastro e login) da ul ul (acesso) como 'absoluta' */
+    visibility:hidden; /*setando a visibilidade da lista (os elementos cadastro e login) como 'escondido'*/
+    color:greenyellow; /* cor da fonte dos elementos em geral */
+    font-family:'Arial'; /* tipo de fonte dos elementos em geral */
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+/* quando passar com o mouse por cima (hover) do elemento li (acesso) da ul (navBar), setar a estilização da ul ul (acesso) */
+.liDropdownH:hover ul{
+	visibility: visible; /* deixando a visibilidade da lista (acesso - elementos cadastro e login) ul ul como visível*/
+    display: block;
+}
+
+/* estilizando os elementos li (cadastro e login) da ul (acesso) da ul (inicio, contador, acesso) da navBar */
+.liDropdownH ul li{
+	float:none; /* setando a flutuação dos itens como none */
+	border-bottom: solid 1px greenyellow; /* criando uma borda na parte inferior  */
+	color:greenyellow; /* cor da fonte dos elementos em geral */
+	font-family:'Arial'; /* tipo de fonte dos elementos em geral */
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+/* estilizando os elementos a (texto e campo de click realmente) dos elementos li (cadastro e login) da ul (acesso) da ul (index, contador, login) da navBar */
+.btnNavH{
+	background-color:#403d34; /* setando o background do a */
+	color:greenyellow; /* cor da fonte dos elementos em geral */
+	font-family:'Arial'; /* tipo de fonte dos elementos em geral */
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border:none;
+    outline: none;
+    /* background: none; */
+}
+
+/****************************** FIM NAVBAR HORIZONTAL ******************************/
+
+#menuzin{
+    display: none;
+}
+
+label[for='menuzin']{
+    box-sizing: border-box;
+    display: none;
+    height: 40px;
+    padding: 3.5vh;
+    padding-bottom: 5vh;
+    background-color: yellow;
+    color: yellowgreen;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+label[for='menuzin']:hover{
+    background-color: red;
+    color: white;
+    transition: 0.7s;
+}
+/****************************** NAVBAR VERTICAL ******************************/
+.divNavV{
+    /* display: none; */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: auto; 
+    width: 100%;
+    display: none;
+}
+
+.navVertical{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: violet;
+    border: 1px solid rgb(255, 0, 0);
+    list-style-type: none;
+}
+
+.navVertical li{
+    /* box-sizing: border-box; */
+    text-align: center;
+    border-bottom: 1px solid rgb(255, 0, 0);
+}
+
+.navVertical li:last-child{
+    border-bottom: none;
+}
+
+.navVertical li a{
+    box-sizing: border-box;
+    display: block;
+    padding: 2vh;
+    text-decoration: none;
+    background-color: cyan;
+}
+
+.navVertical li a:hover{
+    color: red;
+    background-color: white;
+    transition: 0.7s;
+}
+
+.liAcesso{
+    visibility: hidden;
+    display: none;
+}
+
+.liDropdownV:hover .liAcesso{
+    display: block !important;
+    visibility: visible;
+    animation: fadeIn 0.4s;
+    -webkit-animation: fadeIn 0.4s;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+/****************************** FIM NAVBAR VERTICAL ******************************/
+
+/* RESPONSIVIDADE NAVBAR */
+@media (max-width: 735px){        
+    .navHorizontal{
+        display: none;
+    }
+
+    label[for='menuzin']{
+        display: block;
+    }
+
+}
+/* FIM MEDIA NAVBAR */
+
+#menuzin:checked ~ .divNavV{
+	display: block;
+}
+
+#menuzin:checked ~ label[for='menuzin']{
+    background-color: red;
+    color: white;
+}
+
+@media (min-width: 736px){
+    #menuzin:checked ~ .divNavV{
+        display: none;
+    }    
+}
