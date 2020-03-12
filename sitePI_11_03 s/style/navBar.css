@@ -1,23 +1,88 @@
+.fontYellow{
+    color: #ffc700;
+}
+
+.divEspacoNav{
+    height: 206px;
+    width: 100%;
+}
+
+.btnTopo{
+    padding: 0 12px;
+    margin: 0;
+    background-color: black;
+    border-radius: 100vh;
+    display: none;
+    text-decoration: none;
+    position: fixed;
+    bottom: 3vh;
+    left: 2vw;
+    font-size: 200%;
+    outline: none;
+}
+
+.btnTopo:hover{
+    color: #403d34;
+    background-color: #ffc700;
+    transition: 0.7s;
+}
+
+.textoTopo{
+    display: none;
+    background-color: lightgrey;
+    padding: 0 16px;
+    position: fixed;
+    bottom: 5vh;
+    left: 6.7vw;
+}
+
+.btnTopo:hover .textoTopo{
+    display: block;
+}
+
+.divContainerLogo{
+    text-align: center;
+    background-color: black;
+    height: 150px;
+    z-index: 100 !important;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+}
+
+.imgLogo{
+    width:auto;
+    height: 130px; 
+    z-index: 99;
+    padding: 0 !important; 
+    padding-top: 0 !important; 
+    margin-top: 1vh;
+}
+
 
 /****************************** NAVBAR HORIZONTAL ******************************/
 .divNavH{
     margin: 0;
     padding: 0;
-    height: auto;
+    height: 58px;
     width:100%; 
-	box-shadow: 0px 1px 4px 1px rgb(163, 150, 133); 
+	box-shadow: 0px 1px 3px 0px #ffc700; 
 	position: fixed;
-	top:0;
+	top:150px;
 	left:0;
-	z-index: 1;
-	font-weight: bold;
+	z-index: 10;
+    font-weight: bold;
+    background-color: black;
 }
 
 .navHorizontal{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: violet;
+    background-color: black;
 }
 
 .navHorizontal li{
@@ -25,65 +90,74 @@
     padding: 9.7px 0;
     height: 100%;
     display: inline-block;
-    background-color: crimson;
+    background-color: black;
 }
 
 .navHorizontal li a{
     box-sizing: border-box;
     margin: 0;
     padding: 10px 10px;
-    height: 100%;
+    /* height: 100%; */
     min-height: 50px;
     font-size: 200%;
     text-decoration: none;
-    background-color: cyan;
+    background-color: black;
 }
 
 .navHorizontal li a:hover{
-    border-bottom: 2px dotted blue;
-    color: red;
-    background-color: white;
+    color: #403d34;
+    background-color: #ffc700;
     transition: 0.7s;
 }
-
 
 .ulDropdownH{
     list-style:none; /* removendo o tipo de lista da ul ul da navBar (elemento 'Acesso' que tem dois li - Cadastro e Login) */
     position:absolute; /* setando a posição da lista(os elementos cadastro e login) da ul ul (acesso) como 'absoluta' */
-    visibility:hidden; /*setando a visibilidade da lista (os elementos cadastro e login) como 'escondido'*/
     color:greenyellow; /* cor da fonte dos elementos em geral */
-    font-family:'Arial'; /* tipo de fonte dos elementos em geral */
     font-weight: bold;
     display: flex;
     flex-direction: column;
     padding: 0;
     margin: 0;
+    z-index: -100;
+    margin-top: -500px !important;
 }
 
-/* quando passar com o mouse por cima (hover) do elemento li (acesso) da ul (navBar), setar a estilização da ul ul (acesso) */
+/* quando passar com o mouse por cima do elemento li (acesso) da ul (navBar), setar a estilização da ul ul (acesso) */
 .liDropdownH:hover ul{
-	visibility: visible; /* deixando a visibilidade da lista (acesso - elementos cadastro e login) ul ul como visível*/
-    display: block;
+    margin-top: 2px !important;
+	display: block;
+    transition: 0.7s;
 }
 
 /* estilizando os elementos li (cadastro e login) da ul (acesso) da ul (inicio, contador, acesso) da navBar */
 .liDropdownH ul li{
 	float:none; /* setando a flutuação dos itens como none */
-	border-bottom: solid 1px greenyellow; /* criando uma borda na parte inferior  */
+	border-bottom: solid 1px black; /* criando uma borda na parte inferior  */
 	color:greenyellow; /* cor da fonte dos elementos em geral */
-	font-family:'Arial'; /* tipo de fonte dos elementos em geral */
 	font-weight: bold;
+    padding: 0;
+    margin: 0;
 }
 
 /* estilizando os elementos a (texto e campo de click realmente) dos elementos li (cadastro e login) da ul (acesso) da ul (index, contador, login) da navBar */
 .btnNavH{
-	background-color:#403d34; /* setando o background do a */
-	color:greenyellow; /* cor da fonte dos elementos em geral */
-	font-family:'Arial'; /* tipo de fonte dos elementos em geral */
-    font-weight: bold;
-    /* border:none;
+	background-color:#ffc700; /* setando o background do a */
+	color: #403d34; /* cor da fonte dos elementos em geral */
+	font-weight: bold;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border:none;
     outline: none;
-    background: none; */
+    cursor: pointer;
+    font-size: 100%;
+}
+.btnNavH:hover{
+    background-color: #403d34;
+    color: #ffc700;
+    transition: 0.7s;
 }
 
 /****************************** FIM NAVBAR HORIZONTAL ******************************/
@@ -93,26 +167,33 @@
 }
 
 label[for='menuzin']{
+    position: fixed;
+    top: 0;
+    left: 0;
     box-sizing: border-box;
     display: none;
     height: 40px;
-    padding: 3.5vh;
-    padding-bottom: 5vh;
-    background-color: yellow;
-    color: yellowgreen;
+    padding: 20px;
+    padding-bottom: 30px;
+    background-color: #ffc700;
+    color: black;
     text-align: center;
     cursor: pointer;
     width: 100%;
+    border-bottom: 1px solid black;
 }
 
 label[for='menuzin']:hover{
-    background-color: red;
-    color: white;
+    background-color: black;
+    color: #ffc700;
     transition: 0.7s;
 }
 /****************************** NAVBAR VERTICAL ******************************/
 .divNavV{
     /* display: none; */
+    position: fixed;
+    top: 50px;
+    left: 0;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -126,15 +207,14 @@ label[for='menuzin']:hover{
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: violet;
-    border: 1px solid rgb(255, 0, 0);
+    background-color: black;
+    border: 1px solid black;
     list-style-type: none;
 }
 
 .navVertical li{
-    /* box-sizing: border-box; */
     text-align: center;
-    border-bottom: 1px solid rgb(255, 0, 0);
+    border-bottom: 1px solid black;
 }
 
 .navVertical li:last-child{
@@ -146,12 +226,12 @@ label[for='menuzin']:hover{
     display: block;
     padding: 2vh;
     text-decoration: none;
-    background-color: cyan;
+    background-color: #ffc700;
 }
 
 .navVertical li a:hover{
-    color: red;
-    background-color: white;
+    color: #ffc700;
+    background-color:#403d34;
     transition: 0.7s;
 }
 
@@ -167,6 +247,23 @@ label[for='menuzin']:hover{
     -webkit-animation: fadeIn 0.4s;
 }
 
+.btnNavV{
+	background-color:#ffc700; /* setando o background do a */
+	color: black; /* cor da fonte dos elementos em geral */
+	font-weight: bold;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    font-size: 100%;
+}
+.btnNavV:hover{
+    background-color: #403d34;
+    color: #ffc700;
+    transition: 0.7s;
+}
 
 
 @-webkit-keyframes fadeIn {
@@ -181,13 +278,24 @@ label[for='menuzin']:hover{
 /****************************** FIM NAVBAR VERTICAL ******************************/
 
 /* RESPONSIVIDADE NAVBAR */
-@media (max-width: 693px){        
+@media (max-width: 885px){        
     .navHorizontal{
+        display: none;
+    }
+    .divNavH{
         display: none;
     }
 
     label[for='menuzin']{
         display: block;
+    }
+
+    .divContainerLogo{
+        display: none;
+    }
+
+    .divEspacoNav{
+        height: 50px;
     }
 
 }
@@ -198,11 +306,11 @@ label[for='menuzin']:hover{
 }
 
 #menuzin:checked ~ label[for='menuzin']{
-    background-color: red;
-    color: white;
+    background-color: black;
+    color: #ffc700;
 }
 
-@media (min-width: 694px){
+@media (min-width: 886px){
     #menuzin:checked ~ .divNavV{
         display: none;
     }    
