@@ -25,7 +25,7 @@
 }
 
 ::placeholder{
-  font-size: 70%;
+  font-size: 98%;
 }
 
 
@@ -94,7 +94,11 @@
   border-bottom-right-radius: 2vh;
 }
 .containerSenha{
-  display: block;
+  background-color: #e4e4e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .divEsqueci{
   position: relative;
@@ -118,7 +122,7 @@ span.psw {
   margin: 0;
   display: none; /* deixa visibiidade escondida */
   position: fixed; /* isso vai fazer com que ele seja fixo */
-  z-index: 1; /* ele se posiciona a frente dos outros componentes, de acordo com o eixo Z (sendo X horizontal, Y vertical e Z profundidade) */
+  z-index: 100000 !important; /* ele se posiciona a frente dos outros componentes, de acordo com o eixo Z (sendo X horizontal, Y vertical e Z profundidade) */
   left: 0; /* sua posição fixa vai ser colada na esquerda, tendo 0 de distância da extremidade do body */
   top: 0; /* sua posição fixa vai ser colado ao topo, tendo 0 de distância da extremidade do body */
   width: 100%; /* largura completa em relação ao body */
@@ -174,9 +178,6 @@ span.psw {
   }
   .container{
     height:auto;
-  }
-  .containerSenha{
-    text-align: center;
   }
   .divEsqueci{
     float:none;

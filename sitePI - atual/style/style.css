@@ -23,7 +23,6 @@ body{
     align-items: center;
 }
 
-
 .divHeader{
     height: auto;
     padding: 0;
@@ -31,13 +30,34 @@ body{
 }
 
 .divSection{
-    padding: 0;
-    margin: 0;
-    height: 91vh;
+    display: block;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: auto;
+    background-color: #403d34;
+}
+
+.divSectionEquipe{
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: #ffc700;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+
+.tituloEquipe{
+    padding: 16px; 
+    margin-top: 0;
+    margin-bottom: 0;    
 }
 
 .divContato{
-    height: auto;
+    background-color: rgb(0, 0, 0);
+    height: 77vh;
+    border: 1px solid #ffc700;
 }
 
 .divFooter{
@@ -46,6 +66,8 @@ body{
 
 .divPreFooter{
     height: 2vh;
+    text-align: center;
+    background-color: black; 
 }
 
 .divRights{
@@ -67,15 +89,13 @@ hr {
 .divImgHeader{
     padding: 0;
     margin: 0;
-    float: right; 
     height: 85%; 
     width: 100%; 
     background-color: rgb(0, 0, 0);
 }
 .divTextoHeader{
     padding: 0;
-    margin: 0;
-    float: left; 
+    margin: 0; 
     text-align: center;
     height: 45%; 
     width: 100%; 
@@ -83,6 +103,8 @@ hr {
 }
 
 .hTitulo{
+    padding-top: 48px;
+    padding-bottom: 0;
     color: #ffc700;
     font-size: 270%;
     width: 100%;
@@ -91,12 +113,14 @@ hr {
     color: #ffc700;
     text-align: justify;
     font-size: 150%;
-    margin: 24px;
+    margin: 48px;
+    margin-bottom: 0;
+    padding-bottom: 48px;
 }
 
 
 .divTextoL{
-    float: left; 
+    /* float: left;  */
     text-align: center;
     height: 100%; 
     width: 40%; 
@@ -104,27 +128,26 @@ hr {
 }
 
 .divTextoR{
-    float: right; 
-    height: 100%; 
-    width: 40%; 
-    background-color: #f7d673;
+    text-align: center;
+    height: auto; 
+    width: auto; 
+    background-color: #403d34;
+    margin-top: -30px;
 }
-.divTextoR 
-.divImgR{
-    float: right; 
-    height: 100%; 
-    width: 60%; 
-    background-color: #032a30;
-}
-
 
 .divImgL{
     float: left; 
     text-align: center;
-    height: 100%; 
-    width: 60%; 
-    background-color: #00e1ff;
+    height: auto; 
+    width: auto; 
+    background-color: black;
 }
+
+.imgSection{
+    height: auto;
+    width: auto;
+}
+
 .imgHeader{
     width: 100%;
     height: 100%;
@@ -133,22 +156,66 @@ hr {
 
 /* carrosel: */
 
-.w3-content{
+.margemAutomatica{
     margin-left:auto;
     margin-right:auto
 }
-.w3-content{
-    max-width:980px
-}
-.w3-section{
+.margemTB{
     margin-top:16px!important;
     margin-bottom:16px!important
 }
 .divSlides{
-    height: auto;
+    height: 100%;
     width: 100%;
-    background-color: crimson;
+    background-color: #403d34;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.divApresentacao{
+    max-width:440px; 
+    background-color: #ffc700;
+    border: 1px solid red;
+}
+
+.slideContato{
+    display:none;
+    width:100%; 
+    height:430px
+}
+
+@media (max-width: 900px){
+    #logoFaixaV{
+        display: block !important;
+    }
+}
+
+@media(max-width: 800px){
+    #bemVindoH{
+        display: none;
+    }
+    #bemVindoV{
+        display: block !important;
+        height: 500px;
+        width: 100%;
+    }
+    .divImgL{
+        width: 100%;
+        display: block;
+    }
+    .divTextoR{
+        width: 100%;
+        display: block;
+        margin-left: 0;
+    }
+    .divSection{
+        height: auto;
+    }
+}
+
+@media (max-width: 650px){
+    #bemVindoV{
+        height: 100%;
+    }    
 }

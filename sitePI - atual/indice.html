@@ -16,7 +16,7 @@
         <button class="btnTopo fontYellow" onclick="window.scrollTo(0, 0)" id="btnTopo">⬆</button>
         <div class="textoTopo">Voltar ao início</div>
         <div class="divContainerLogo fontYellow" id="divLogo">
-            <img class="imgLogo" id="idImgLogo" src="image/logo.png" alt="">
+            <img class="imgLogo" id="idImgLogo" src="image/logoFaixa.png" alt="">
         </div>
         
         <!-- INICIO NAVBAR HORIZONTAL -->
@@ -299,7 +299,6 @@
         }
     }
 
-
     window.onscroll = function() {funcaoScroll()};
     var contPix = 0;
 
@@ -309,8 +308,8 @@
             var divNav =  document.getElementById("divNavH");
             var btnTop =  document.getElementById("btnTopo");
 
-            if (contPix < 150){
-                divNav.style.top = `${150 - contPix}px`;
+            if (contPix < 200){
+                divNav.style.top = `${200 - contPix}px`;
                 divNav.style.left = "0px";
                 btnTop.style.display = "none";
             }
